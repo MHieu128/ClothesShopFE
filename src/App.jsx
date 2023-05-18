@@ -1,40 +1,40 @@
-import { Layout, Space  } from 'antd';
+import {  Layout, Menu, theme, Anchor } from 'antd';
+import HeaderMenu from './components/HeaderMenu'
 
 const { Header, Footer, Content } = Layout;
 
-const headerStyle = {
-  textAlign: 'center',
-  color: '#fff',
-  height: 64,
-  paddingInline: 50,
-  lineHeight: '64px',
-  backgroundColor: '#7dbcea',
-};
-
-const contentStyle = {
-  textAlign: 'center',
-  minHeight: 120,
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#108ee9',
-};
-
-const footerStyle = {
-  textAlign: 'center',
-  color: '#fff',
-  backgroundColor: '#7dbcea',
-};
-
-function App() {
+const App = () => {
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
   return (
-    <Space direction="vertical" style={{width: '100%'}} size={[0, 48]}>
     <Layout>
-      <Header style={headerStyle}>Header</Header>
-      <Content style={contentStyle}>Content</Content>
-      <Footer style={footerStyle}>Footer</Footer>
+      <Header>
+        <div className="demo-logo" />
+        <HeaderMenu/>
+      </Header>
+      <Content
+        className="site-layout"
+        style={{
+          padding: '0 50px',
+        }}
+      >
+        <div
+          style={{
+            padding: 24,
+            minHeight: 800,
+            background: colorBgContainer,
+          }}
+        >
+          <h1>Welcome to dev nha lam!</h1>
+        </div>
+      </Content>
+
+      <Footer style={{textAlign: 'center'}}>
+        Copyright ©2023 Created by NF
+      </Footer>
     </Layout>
-  </Space>
-  )
-}
+  );
+};
 
 export default App
