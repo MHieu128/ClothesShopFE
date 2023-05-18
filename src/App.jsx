@@ -1,7 +1,8 @@
-import {  Layout, Menu, theme, Anchor } from 'antd';
+import {  Layout, theme, Col, Row, Typography  } from 'antd';
 import HeaderMenu from './components/HeaderMenu'
 
 const { Header, Footer, Content } = Layout;
+const { Text } = Typography;
 
 const App = () => {
   const {
@@ -10,8 +11,14 @@ const App = () => {
   return (
     <Layout>
       <Header>
-        <div className="demo-logo" />
-        <HeaderMenu/>
+        <Row>
+          <Col span={8}>
+            <div className="demo-logo" style={{color:'#fff'}}> NF logo</div>
+          </Col>
+          <Col span={8} offset={8}>
+            <HeaderMenu />
+          </Col>
+        </Row>
       </Header>
       <Content
         className="site-layout"
