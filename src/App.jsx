@@ -1,8 +1,8 @@
-import {  Layout, theme, Col, Row, Typography  } from 'antd';
+import {  Layout, theme, Col, Row  } from 'antd';
 import HeaderMenu from './components/HeaderMenu'
+import HomeScreen from './screens/HomeScreen';
 
 const { Header, Footer, Content } = Layout;
-const { Text } = Typography;
 
 const App = () => {
   const {
@@ -33,7 +33,7 @@ const App = () => {
             background: colorBgContainer,
           }}
         >
-          <h1>Welcome to dev nha lam!</h1>
+          <HomeScreen />
         </div>
       </Content>
 
