@@ -1,6 +1,6 @@
 import {  Layout, theme, Col, Row  } from 'antd';
 import HeaderMenu from './components/HeaderMenu'
-import HomeScreen from './screens/HomeScreen';
+import { Outlet } from 'react-router-dom';
 
 const { Header, Footer, Content } = Layout;
 
@@ -33,7 +33,7 @@ const App = () => {
             background: colorBgContainer,
           }}
         >
-          <HomeScreen />
+          <Outlet />
         </div>
       </Content>
 
