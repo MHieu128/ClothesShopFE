@@ -1,4 +1,3 @@
-import { Row, Col} from 'antd'
 import products from '../fakedata/products'
 import Product from '../components/Product'
 
